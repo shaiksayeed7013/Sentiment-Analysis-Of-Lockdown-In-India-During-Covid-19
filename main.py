@@ -3,12 +3,22 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import classification_report, accuracy_score
+from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
 from sklearn.preprocessing import LabelEncoder
 import joblib
+import seaborn as sns
+import matplotlib.pyplot as plt
+from PIL import Image
+
+# Load an image for lockdown
+lockdown_image = Image.open("lockdown_image.jpeg")  # Replace with the actual file path of your image
+
+# Display the image in Streamlit
+st.image(lockdown_image, caption="Lockdown Image", use_column_width=True)
 
 # Load your dataset
 df = pd.read_csv('finalSentimentdata2.csv')  # Replace 'your_dataset.csv' with the actual file path
+
 
 # Data Preprocessing
 le = LabelEncoder()
@@ -50,4 +60,53 @@ user_input = st.text_input("Enter a keyword:")
 # Perform sentiment prediction when the user clicks the button
 if st.button("Predict Sentiment"):
     result = predict_sentiment(user_input)
-    st.write(f"Sentiment for '{user_input}': {result}")
+    
+    # Map sentiments to emojis
+    emoji_mapping = {
+        "happy": "😄",
+        "sad": "😢",
+        "joy": "😊",
+        "anger": "😡",
+        "fear": "😨",
+        # Add more mappings as needed
+    }
+
+    # Display sentiment with emoji
+    if result.lower() in emoji_mapping:
+        emoji = emoji_mapping[result.lower()]
+        st.success(f"Sentiment for '{user_input}': {result} {emoji}")
+    else:
+        st.success(f"Sentiment for '{user_input}': {result}")
+
+# Add a separate section for evaluation results and confusion matrix
+if st.checkbox("Show Evaluation Results"):
+    st.subheader("Evaluation Results")
+
+    # Evaluate the classifier
+    y_pred = classifier.predict(X_test)
+    accuracy = accuracy_score(y_test, y_pred)
+    classification_report_str = classification_report(y_test, y_pred)
+
+    # Display accuracy and classification report
+    st.write(f"Accuracy: {accuracy * 100:.2f}%")
+    st.text("Classification Report:")
+    st.code(classification_report_str)
+
+if st.checkbox("Show Confusion Matrix"):
+    st.subheader("Confusion Matrix")
+
+    # Create a confusion matrix
+    conf_matrix = confusion_matrix(y_test, y_pred)
+
+    # Plot the confusion matrix
+    fig, ax = plt.subplots(figsize=(8, 6))
+    sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=le.classes_, yticklabels=le.classes_)
+    st.pyplot(fig)
+
+# Recommendations and Future Work
+st.subheader("Recommendations and Future Work")
+st.markdown("- Consider exploring more advanced models for sentiment analysis.")
+st.markdown("- Experiment with hyperparameter tuning to improve model performance.")
+st.markdown("- Explore additional features or embeddings for better representation.")
+st.markdown("- Fine-tune the model with a larger dataset for improved generalization.")
+st.markdown("- Investigate the use of deep learning models for sentiment analysis.")
