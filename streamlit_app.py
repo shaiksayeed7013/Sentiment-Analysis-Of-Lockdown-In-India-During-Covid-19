@@ -8,7 +8,7 @@ from sklearn.preprocessing import LabelEncoder
 import joblib
 
 # Load your dataset
-df = pd.read_csv('C:/Users/shaik/Downloads/finalSentimentdata2.csv')  # Replace 'your_dataset.csv' with the actual file path
+df = pd.read_csv('finalSentimentdata2.csv')  # Replace 'your_dataset.csv' with the actual file path
 
 # Data Preprocessing
 le = LabelEncoder()
