@@ -84,6 +84,10 @@ Deep Learning: Implement deep learning models to capture complex sentiment patte
 
 The "Sentiment Analysis of Lockdown in India During Covid-19" project aims to analyze public sentiment on Twitter during the lockdown period in India due to the Covid-19 pandemic. The project utilizes Natural Language Processing (NLP) techniques to classify sentiments (e.g., happy, sad, anger) based on tweet text. The analysis is implemented using a Naive Bayes classifier and is hosted in a Streamlit application.
 
+## Live Demo
+
+Check out the live demo of the project here: [Sentiment Analysis of Lockdown in India during COVID-19](https://sentiment-analysis-of-lockdown-in-india-during-covid-19-2kbdxw.streamlit.app/)
+
 ## Useful Links
 
 - [Streamlit Documentation](https://docs.streamlit.io)
