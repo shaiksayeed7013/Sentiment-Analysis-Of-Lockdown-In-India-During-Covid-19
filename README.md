@@ -31,3 +31,5 @@ First, clone the repository to your local machine:
 ```sh
 git clone https://github.com/yourusername/Sentiment-Analysis-Of-Lockdown-In-India-During-Covid-19.git
 cd Sentiment-Analysis-Of-Lockdown-In-India-During-Covid-19
+
+Copy and paste this into your GitHub README file. It will render with the appropriate formatting, making headings distinct, code blocks clear, and sections well-organized.
