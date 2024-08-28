@@ -17,40 +17,6 @@ Recommendations and Future Work: Suggestions for improving the model and extendi
 How to Use
 1. Clone the Repository
 First, clone the repository to your local machine:
-
-sh
-Copy code
 git clone https://github.com/yourusername/Sentiment-Analysis-Of-Lockdown-In-India-During-Covid-19.git
 cd Sentiment-Analysis-Of-Lockdown-In-India-During-Covid-19
-2. Install the Requirements
-Install the necessary Python packages using pip:
 
-sh
-Copy code
-pip install -r requirements.txt
-3. Run the Application
-Run the Streamlit app:
-
-sh
-Copy code
-streamlit run main.py
-4. Predict Sentiments
-Enter a keyword related to Covid-19 or the lockdown to see the predicted sentiment.
-View evaluation metrics like accuracy and classification report.
-Analyze the confusion matrix to understand the model's performance.
-5. Explore and Modify
-You can customize the model, the data preprocessing, or the Streamlit app to suit your needs:
-
-Data Preprocessing: Modify the LabelEncoder, TfidfVectorizer, or the dataset.
-Model Training: Experiment with different models or hyperparameters.
-App Features: Add new features or improve the user interface in main.py.
-Future Work
-Advanced Models: Explore more sophisticated models for sentiment analysis, such as BERT or LSTM.
-Hyperparameter Tuning: Experiment with different hyperparameters to enhance model accuracy.
-Data Augmentation: Use additional data or techniques like embeddings to improve feature representation.
-Deep Learning: Implement deep learning models to capture complex sentiment patterns.
-Useful Links
-Streamlit Documentation
-Scikit-learn Documentation
-Pandas Documentation
-Seaborn Documentation
