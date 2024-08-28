@@ -31,5 +31,15 @@ First, clone the repository to your local machine:
 ```sh
 git clone https://github.com/yourusername/Sentiment-Analysis-Of-Lockdown-In-India-During-Covid-19.git
 cd Sentiment-Analysis-Of-Lockdown-In-India-During-Covid-19
+```
+# Sentiment Analysis of Lockdown in India During Covid-19
 
-Copy and paste this into your GitHub README file. It will render with the appropriate formatting, making headings distinct, code blocks clear, and sections well-organized.
+## How to Use
+
+### 2. Install the Requirements
+
+Install the necessary Python packages using pip:
+
+```sh
+pip install -r requirements.txt
+```
