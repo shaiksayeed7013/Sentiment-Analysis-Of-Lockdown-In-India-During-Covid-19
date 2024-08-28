@@ -51,7 +51,7 @@ Run the Streamlit app:
 ```sh
 streamlit run main.py
 ```
-###4. Predict Sentiments
+### 4. Predict Sentiments
 
 Enter a keyword related to Covid-19 or the lockdown to see the predicted sentiment.
 
@@ -59,7 +59,7 @@ View evaluation metrics like accuracy and classification report.
 
 Analyze the confusion matrix to understand the model's performance.
 
-###5. Explore and Modify
+### 5. Explore and Modify
 
 You can customize the model, the data preprocessing, or the Streamlit app to suit your needs:
 
@@ -70,7 +70,7 @@ Model Training: Experiment with different models or hyperparameters.
 
 App Features: Add new features or improve the user interface in main.py.
 
-##Future Work
+## Future Work
 
 Advanced Models: Explore more sophisticated models for sentiment analysis, such as BERT or LSTM.
 
