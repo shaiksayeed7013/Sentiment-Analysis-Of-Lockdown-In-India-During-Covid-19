@@ -1,6 +1,6 @@
 # Sentiment-Analysis-Of-Lockdown-In-India-During-Covid-19
 
-# Sentiment Analysis of Lockdown in India During Covid-19
+
 
 ## Introduction
 
@@ -43,3 +43,11 @@ Install the necessary Python packages using pip:
 ```sh
 pip install -r requirements.txt
 ```
+### 3. Run the Application
+
+Run the Streamlit app:
+
+```sh
+streamlit run main.py
+```
+
