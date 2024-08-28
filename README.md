@@ -45,9 +45,48 @@ pip install -r requirements.txt
 ```
 ### 3. Run the Application
 
+
 Run the Streamlit app:
 
 ```sh
 streamlit run main.py
 ```
+###4. Predict Sentiments
 
+Enter a keyword related to Covid-19 or the lockdown to see the predicted sentiment.
+
+View evaluation metrics like accuracy and classification report.
+
+Analyze the confusion matrix to understand the model's performance.
+
+###5. Explore and Modify
+
+You can customize the model, the data preprocessing, or the Streamlit app to suit your needs:
+
+
+Data Preprocessing: Modify the LabelEncoder, TfidfVectorizer, or the dataset.
+
+Model Training: Experiment with different models or hyperparameters.
+
+App Features: Add new features or improve the user interface in main.py.
+
+##Future Work
+
+Advanced Models: Explore more sophisticated models for sentiment analysis, such as BERT or LSTM.
+
+Hyperparameter Tuning: Experiment with different hyperparameters to enhance model accuracy.
+
+Data Augmentation: Use additional data or techniques like embeddings to improve feature representation.
+
+Deep Learning: Implement deep learning models to capture complex sentiment patterns.
+
+## Overview
+
+The "Sentiment Analysis of Lockdown in India During Covid-19" project aims to analyze public sentiment on Twitter during the lockdown period in India due to the Covid-19 pandemic. The project utilizes Natural Language Processing (NLP) techniques to classify sentiments (e.g., happy, sad, anger) based on tweet text. The analysis is implemented using a Naive Bayes classifier and is hosted in a Streamlit application.
+
+## Useful Links
+
+- [Streamlit Documentation](https://docs.streamlit.io)
+- [Scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html)
+- [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
+- [Seaborn Documentation](https://seaborn.pydata.org/)
